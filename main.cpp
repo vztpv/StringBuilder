@@ -58,7 +58,7 @@ public:
 				memcpy(new_buffer, buffer, this->len);
 				memcpy(new_buffer + this->len, cstr, len);
 				new_buffer[this->len + len] = '\0';
-				free(buffer);
+				free(buffer_first);
 				buffer = new_buffer;
 				buffer_first = buffer;
 				this->len = this->len + len;
